@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/main">
+
+    <!-- Horizontal LinearLayout for the top three items -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            app:tint="@android:color/black" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Detail"
+            android:textSize="25sp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:gravity="center"
+            />
+
+        <ImageView
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tint="@android:color/black"
+            android:src="@drawable/save"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+
+        <!-- First ImageView: Movie Poster -->
+        <ImageView
+            android:id="@+id/moviePosterImageView"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img" />
+
+        <ImageView
+            android:id="@+id/movieImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="-80dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/img"/>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:textColor="@color/black"
+    android:text="Spider manl"
+    android:layout_gravity="center"
+    android:layout_marginTop="100dp"
+    android:layout_marginStart="100dp"
+    android:textSize="20sp"
+    android:maxLines="2"
+    android:ellipsize="end" />
+    </FrameLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center"
+    android:layout_marginTop="10dp"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/date"
+        android:layout_gravity="center"
+        android:layout_marginEnd="8dp"/>
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2021"
+        android:textColor="@color/main_dark"/>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="20dp"
+    android:background="@color/main_dark"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/time"
+        android:layout_gravity="center"
+        android:layout_marginEnd="8dp"/>
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="148 minutes"
+        android:textColor="@color/main_dark"/>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="20dp"
+        android:background="@color/main_dark"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/genre"
+        android:layout_gravity="center"
+        android:layout_marginEnd="8dp"/>
+    <TextView
+        android:id="@+id/genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Action"
+        android:textColor="@color/main_dark"/>
+</LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Add more views to show movie details like description, rating, etc. -->
+</LinearLayout>
